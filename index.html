@@ -3,25 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>ViaCEP API</title>
 </head>
 <body>
-
-    <form action="">
         <fieldset>
             <legend>
                 <h2>Busca CEP - Endereço</h2>
             </legend>
-
+            
             <div class="field">
                 <label for="cep"></label>
-                <input type="number" name="cep" placeholder="Digite o CEP" required>
-                <button type="submit" >Buscar</button>
+                <input type="text" name="cep" placeholder="Digite o CEP" id="cep" required >
+                <script type="text/javascript">
+                    $("#cep").mask("00000-000");
+                </script>
+                <button onclick=getAdress()>Buscar</button>
             </div>
             
         </fieldset>
-    </form>
-
+        <div class="adress">
+            <h2 class='rua'></h2>
+            <h2 class='bairro'></h2>
+            <h2 class='localidade'></h2>
+            <h2 class='uf'></h2>
+        </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
