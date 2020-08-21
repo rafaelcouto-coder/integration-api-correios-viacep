@@ -1,36 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Comic+Neue&family=Roboto:wght@400;700&family=Source+Sans+Pro&display=swap"
+        rel="stylesheet">
+
     <title>ViaCEP API</title>
 </head>
+
 <body>
-        <fieldset>
-            <legend>
-                <h2>Busca CEP - Endereço</h2>
-            </legend>
+
+    <header>
+
+    </header>
+
+    <div class="container">
+        <legend>
+            <h1>Buscar endereço por CEP</h1>
+        </legend>
+
+        <div class="field">
+            <label for="cep"></label>
+            <input type="text" name="cep" placeholder="Digite o CEP" id="cep" required>
             
-            <div class="field">
-                <label for="cep"></label>
-                <input type="text" name="cep" placeholder="Digite o CEP" id="cep" required >
-                <script type="text/javascript">
-                    $("#cep").mask("00000-000");
-                </script>
-                <button onclick=getAdress()>Buscar</button>
-            </div>
-            
-        </fieldset>
+            <script type="text/javascript">
+                $("#cep").mask("00000-000");
+            </script>
+            <button onclick=getAdress()>Buscar</button>
+        </div>
+
+
         <div class="adress">
+            <h2 class='unfind'></h2>
             <h2 class='rua'></h2>
             <h2 class='bairro'></h2>
             <h2 class='localidade'></h2>
             <h2 class='uf'></h2>
         </div>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="main.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="main.js"></script>
+
+    </div>
+
+    <footer>
+        <p>Rafael Couto &copy; 2020 - Todos os direitos reservados </p>
+
+    </footer>
+
 </body>
+
 </html>
